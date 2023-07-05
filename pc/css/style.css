@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@font-face {font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face {font-family: 'Pretendard-Regular'; src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight: 400; font-style: normal;}
+
+*{box-sizing: border-box; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0; margin: 0;}
+a {text-decoration: none; outline: none; display: block;}
+a:hover, a:active {text-decoration: none; outline: none;}
+table {border-spacing: 0;}
+fieldset,img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-weight: normal; font-style: normal;}
+strong{font-weight: bold;}
+ol,ul {list-style: none; margin:0; padding:0;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%; margin:0; padding:0; color:#444;}
+q:before,q:after {content:'';}
+abbr,acronym { border: 0;}
+img{display: block;}
+
+#wrapper{width: 100%;}
+.top{width: 100%;  background-color: #000; z-index: 1; position: fixed;}
+.top .topContents{width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.top .topContents > img{float: left; padding: 26px 0; width: 22%;}
+
+.clock {width: 650px; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); display: contents; float: left;}
+
+.flip-clock-divider{width: 50px !important; }
+.flip-clock-divider .flip-clock-label {display: none !important;}
+.flip-clock-divider:nth-child(4)::after{content: '일' !important; display: block !important; color: #5357b0 !important; font-size: 36px !important; line-height: 100px !important; font-family: 'GmarketSansMedium'; font-weight: 600;}
+.flip-clock-divider:nth-child(7)::after{content: '시' !important; display: block !important; color: #5357b0 !important; font-size: 36px !important; line-height: 100px !important; font-family: 'GmarketSansMedium'; font-weight: 600;}
+.flip-clock-divider:nth-child(10)::after{content: '분' !important; display: block !important; color: #5357b0 !important; font-size: 36px !important; line-height: 100px !important; font-family: 'GmarketSansMedium'; font-weight: 600;}
+.flip-clock-wrapper ul li a div div.inn{background-color: #232b94 !important; font-size: 60px !important; color: #fff !important;}
+.flip-clock-wrapper ul{height: 80px!important; line-height: 80px!important;}
+.flip-clock-dot.top {display: none;}
+.flip-clock-dot.bottom {display: none;}
+
+.top .topContents p{display: block !important; color: #5357b0 !important; font-size: 36px !important; line-height: 100px !important; font-family: 'GmarketSansMedium'; font-weight: 600; margin: 0 8px;}
+.top .topContents > a{float: left; padding: 11px 0 11px 30px;}
+.top .topContents > a > img{float: left; width: 100%;}
+.rightBtn{position: fixed; z-index: 1; right: 6%; top: 30%;}
+.rightBtn > a{width: 50%; position: absolute; z-index: 1; bottom: 30px; left: 25%;}
+.rightBtn > a > img{width: 100%;}
+
+#countdown{font-size: 20px; letter-spacing: -1px; position: absolute; top: 55%; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Pretendard-Regular'; width: 100%; text-align: center;}
+
+.section1{position: relative; padding-top: 90px; width: 100%;}
+.swiper-container{position: absolute; bottom: 6%; left: 50%; transform: translateX(-50%); width: 60%; max-width: 1040px; height: auto; overflow: hidden;}
+.swiper-slide{width: 8%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.swiper-slide video {width: 100%; height: 100%; object-fit: cover; padding: 30px 90px;}
+.swiper-button-prev::after {transform: translate(-50%, -50%) rotate(135deg);}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display: none;}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {display: none;}
+
+.section2{position: relative; width: 100%;}
+.section2 .subBtn1{width: 100%;}
+.section2 .subBtn1 > a{display: block; width: 30%;}
+.section2 .subBtn1 > a > img{position: absolute; bottom: 18%; width: 22%; left: 18%; display: block;}
+.btn{width: 100%;}
+
+.section3{position: relative; width: 100%;}
+.section3 .subBtn2{width: 100%;}
+.section3 .subBtn2 > a{display: block; width: 30%;}
+.section3 .subBtn2 > a > img{position: absolute; width: 30%; left: 50%; transform :translate(-50%); bottom: 7%; display: block;}
+
+.section4{position: relative; width: 100%;}
+.section4 .subBtn3{width: 100%;}
+.section4 .subBtn3 > a{display: block; width: 30%;}
+.section4 .subBtn3 > a > img{position: absolute; top: 22%; left: 50%; transform: translateX(-50%); display: block; width: 20%;}
+.section4 .kidsEvent1{position: absolute; left: 36%; width: 3%; animation: move-up-down 1s infinite alternate;}
+.section4 .kidsEvent1 > img{width: 100%;}
+.section4 .kidsEvent2{position: absolute; left: 48.5%; width: 3%; animation: move-up-down 1s infinite alternate;}
+.section4 .kidsEvent2 > img{width: 100%;}
+.section4 .kidsEvent3{position: absolute; left: 61%; width: 3%; animation: move-up-down 1s infinite alternate;}
+.section4 .kidsEvent3 > img{width: 100%;}
+
+ @keyframes move-up-down {
+    from {
+      top: 71.5%;
+    }
+    to {
+      top: 73%;
+    }
+  }
+
+.section4-1 .sec4Sub1{width: 100%; position: relative;}
+.section4-1 .sec4Sub1 > a{display: block; width: 100%;}
+.section4-1 .sec4Sub1 > a > img{position: absolute; bottom: 34.5%; right: 21%; display: block; width: 6%;}
+.section4-1 .sec4Sub2{width: 100%; position: relative;}
+.section4-1 .sec4Sub2 > a{display: block; width: 30%;}
+.section4-1 .sec4Sub2 > a > img{position: absolute; bottom: 47%; right: 21%; display: block; width: 6%;}
+.section4-1 .sec4Sub3{width: 100%; position: relative;}
+.section4-1 .sec4Sub3 > a{display: block; width: 30%;}
+.section4-1 .sec4Sub3 > a > img{position: absolute; bottom: 46.9%; right: 21%; display: block; width: 6%;}
+.section4-1 .sec4Sub4{width: 100%; position: relative;}
+.section4-1 .sec4Sub4 > a{display: block; width: 30%;}
+.section4-1 .sec4Sub4 > a > img{position: absolute; bottom: 48.7%; right: 21%; display: block; width: 6%;}
+
+.section5{position: relative; width: 100%;}
+.bx-wrapper{position: absolute !important; top: 63%; left: 54%; transform: translate(-50%, -50%); box-shadow:0 !important; border:0 !important; width: 100%; -webkit-box-shadow: 0 0 0px #ccc !important;}
+/* bxslider 슬라이드 좌우 그라데이션 스타일 */
+.bx-wrapper .bx-viewport::before,.bx-wrapper .bx-viewport::after{content: ""; position: absolute; top: 0; height: 100%; width:20%; z-index: 100;}
+/* 좌측 그라데이션 스타일 */
+.bx-wrapper .bx-viewport::before{left: 0; background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);}
+/* 우측 그라데이션 스타일 */
+.bx-wrapper .bx-viewport::after{right: 0; background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);}
+
+.section6{position: relative; width: 100%;}
+.section6 .sec6Sub4{width: 100%; position: relative;}
+.section6 .sec6Sub4 .sec6SubGif1{display: block; width: 100%;}
+.section6 .sec6Sub4 .sec6SubGif1 img{position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); display: block; width: 35%;}
+.section6 .sec6Sub5{width: 100%; display: block; position: relative;}
+.section6 .sec6Sub5 .sec6SubGif2{display: block; width: 100%;}
+.section6 .sec6Sub5 .sec6SubGif2 img{position: absolute; bottom: 12%; left: 28%; display: block; width: 24%;}
+
+.section7{position: relative; width: 100%;}
+
+.section8{position: relative; width: 100%;}
+.section8 .subBtn4{width: 100%;}
+.section8 .subBtn4 > a{display: block; width: 30%;}
+.section8 .subBtn4 > a > img{position: absolute; top: 22%; left: 50%; transform: translateX(-50%); display: block; width: 20%;}
+
+.section9{position: relative; width: 100%;}
+.section9 .subBtn5{width: 100%;}
+.section9 .subBtn5 > a{display: block; width: 30%;}
+.section9 .subBtn5 > a > img{position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); display: block; width: 11%;}
+
+.section10{position: relative; width: 100%;}
+.section10 .sec10Sub1{width: 100%; position: relative;}
+.section10 .sec10Sub1 > a{display: block; width: 30%;}
+.section10 .sec10Sub1 > a > img{position: absolute; bottom: 12%; right: 16.6%; display: block; width: 5%;}
+.section10 .sec10Sub2{width: 100%; position: relative;}
+.section10 .sec10Sub2 > a{display: block; width: 30%;}
+.section10 .sec10Sub2 > a > img{position: absolute; bottom: 15.2%; right: 16.6%; display: block; width: 5%;}
+.section10 .sec10Sub3{width: 100%; position: relative;}
+.section10 .sec10Sub3 > a{display: block; width: 30%;}
+.section10 .sec10Sub3 > a > img{position: absolute; bottom: 15.2%; right: 16.6%; display: block; width: 5%;}
+.section10 .sec10Sub4{width: 100%; position: relative;}
+.section10 .sec10Sub4 > a{display: block; width: 30%;}
+.section10 .sec10Sub4 > a > img{position: absolute; bottom: 15.2%; right: 16.6%; display: block; width: 5%;}
+
+.section11{position: relative; width: 100%;}
+
+.section12{position: relative; width: 100%;}
+.section12 .sec12Sub1{width: 100%; position: absolute; display: block; bottom: 28%;}
+.section12 .sec12Sub1 .sec12Sub1-1{position: absolute; display: inline-flex; bottom: 20%; left: 28%; float: left; width: 18%;}
+.section12 .sec12Sub1 .sec12Sub1-1 > a{margin-left: 20px;}
+.section12 .sec12Sub1 .sec12Sub1-1 > a:nth-child(1){margin-left: 0px;}
+.section12 .sec12Sub1 .sec12Sub1-1 > a >img{width: 100%;}
+.section12 .sec12Sub1 .sec12Sub1-2{position: absolute; display: inline-flex; bottom: 50%; left: 54%; width: 18%;}
+.section12 .sec12Sub1 .sec12Sub1-2 > a{}
+.section12 .sec12Sub1 .sec12Sub1-2 > a >img{width: 100%;}
+.section12 .sec12Sub2{position: absolute; width: 50%; bottom: 8%; display: flex; flex-direction: row; justify-content: space-around; transform: translateX(-50%); left: 50%;}
+.section12 .sec12Sub2 > a {display: block;}
+.section12 .sec12Sub2 > a > img{width: 100%;}
+
+.section13{position: relative; width: 100%;}
+
+.section14{position: relative; width: 100%;}
+
+footer{width: 100%; position: relative;}
+footer .footerBtn .footerSub1{position: absolute; width: 21%; bottom: 37%; display: flex; flex-direction: row; justify-content: space-around; transform: translateX(-50%); left: 45%;}
+footer .footerBtn .footerSub1 > a{display: block; width: 100%;}
+footer .footerBtn  .footerSub1 > a:nth-child(1){padding-left: 0px;}
+footer .footerBtn  .footerSub1 > a:nth-child(2){padding-left: 3%;}
+footer .footerBtn  .footerSub1 > a > img{width: 100%;}
+
+footer .footerBtn .footerSub2{position: absolute; width: 15%; bottom: 18%; display: flex; flex-direction: row; justify-content: space-around; transform: translateX(-50%); right: 8.5%;}
+footer .footerBtn .footerSub2 > a{display: block; width: 100%;}
+footer .footerBtn  .footerSub2 > a:nth-child(1){padding-left: 0px;}
+footer .footerBtn  .footerSub2 > a:nth-child(2){padding-left: 3%;}
+footer .footerBtn  .footerSub2 > a > img{width: 100%;}
+
+
+footer .footerSub2{}
+
+@media (max-width: 1600px) {
+    .swiper-container{bottom: 3%;}
+}

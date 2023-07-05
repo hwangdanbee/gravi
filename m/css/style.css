@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@font-face {font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face {font-family: 'Pretendard-Regular'; src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight: 400; font-style: normal;}
+
+*{box-sizing: border-box;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding: 0; margin: 0;}
+a {text-decoration: none; outline: none; display: block;}
+a:hover, a:active {text-decoration: none; outline: none;}
+table {border-spacing: 0;}
+fieldset,img {border: 0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-weight: normal; font-style: normal;}
+strong{font-weight: bold;}
+ol,ul {list-style: none; margin:0; padding:0;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal; font-size: 100%; margin:0; padding:0; color:#444;}
+q:before,q:after {content:'';}
+abbr,acronym { border: 0;}
+img{display: block;}
+
+#wrapper{width: 100%; max-width: 750px; margin: 0 auto;}
+.top{max-width: 750px;  background-color: #000; z-index: 1; position: fixed; width: 100%;}
+.top .topContents{width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.top .topContents > img{float: left; padding: 0px 10px; width: 30%;}
+
+.clock {width: 650px; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); display: contents; float: left;}
+
+.flip-clock-divider{width: 30px !important; height: 50px !important;}
+.flip-clock-divider:nth-child(1){display: none;}
+.flip-clock-divider .flip-clock-label {display: none !important;}
+.flip-clock-divider:nth-child(4)::after{content: '일' !important; display: block !important; color: #5357b0 !important; font-size: 1.2em !important; line-height: 50px !important; font-family: 'GmarketSansMedium'; font-weight: 600;}
+.flip-clock-divider:nth-child(7)::after{content: '시' !important; display: block !important; color: #5357b0 !important; font-size: 1.2em !important; line-height: 50px !important; font-family: 'GmarketSansMedium'; font-weight: 600;}
+.flip-clock-divider:nth-child(10)::after{content: '분' !important; display: block !important; color: #5357b0 !important; font-size: 1.2em !important; line-height: 50px !important; font-family: 'GmarketSansMedium'; font-weight: 600;}
+.flip-clock-wrapper ul{height: 30px!important; line-height: 30px!important; width: 10% !important; margin: 2px !important; border-radius:2px !important;}
+.flip-clock-wrapper ul li{line-height: 30px !important;}
+.flip-clock-wrapper ul li a div div.inn{background-color: #232b94 !important; font-size: 0.2em !important; color: #fff !important;}
+.flip-clock-dot.top {display: none;}
+.flip-clock-dot.bottom {display: none;}
+
+.top .topContents p{display: block !important; color: #5357b0 !important; font-size: 0.8em !important; line-height: 50px !important; font-family: 'GmarketSansMedium'; font-weight: 600; margin: 0 4px;}
+.top .topContents > a{float: left; padding: 10px 0px;}
+.top .topContents > a > img{float: left; width: 100%;}
+
+.rightBtn{position: fixed; z-index: 1; right: 6%; top: 30%;}
+.rightBtn > a{width: 50%; position: absolute; z-index: 1; bottom: 30px; left: 25%;}
+.rightBtn > a > img{width: 100%;}
+
+.countdowntimer{font-size: 22px; letter-spacing: -0.5px; position: absolute; top: 54%; left: 50%; transform: translateX(-50%); color: #fff;}
+.countdowntimer > span{font-family: 'Pretendard-Regular';}
+
+.section1{position: relative; padding-top: 50px; width: 100%;}
+.swiper-container{position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); width: 100%; max-width: 750px; height: auto; overflow: hidden;}
+.swiper-slide{width: 8%; height: 100%; display: flex; justify-content: center; align-items: center; }
+.swiper-slide video {width: 100%; height: 100%; object-fit: cover; padding: 40px;}
+.swiper-button-prev::after {transform: translate(-50%, -50%) rotate(135deg);}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {display: none;}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {display: none;}
+.swiper-button-prev img{width: 100%;}
+.swiper-button-next img{width: 100%;}
+
+.section2{position: relative; width: 100%;}
+.section2 .subBtn1{width: 100%;}
+.section2 .subBtn1 > a{display: block; width: 30%;}
+.section2 .subBtn1 > a > img{position: absolute; width: 66%; bottom: 8%; left: 50%; display: block; transform: translateX(-50%);}
+.btn{width: 100%;}
+
+.section3{position: relative; width: 100%;}
+.section3 .subBtn2{width: 100%;}
+.section3 .subBtn2 > a{display: block; width: 30%;}
+.section3 .subBtn2 > a > img{position: absolute; width: 84%; left: 50%; transform :translate(-50%); bottom: 3%; display: block;}
+
+.section4{position: relative; width: 100%;}
+.section4 .subBtn3{width: 100%;}
+.section4 .subBtn3 > a{display: block; width: 30%;}
+.section4 .subBtn3 > a > img{position: absolute; top: 32%; left: 50%; transform: translateX(-50%); display: block; width: 50%;}
+
+.section5{position: relative; width: 100%;}
+.section5 .kidsEvent1{position: absolute; top: 46%; left: 14%; width: 8%; animation: move-up-down 1s infinite alternate;}
+.section5 .kidsEvent1 > img{width: 100%;}
+.section5 .kidsEvent2{position: absolute; top: 45%; left: 46%; width: 9%; animation: move-up-down 1s infinite alternate;}
+.section5 .kidsEvent2 > img{width: 100%;}
+.section5 .kidsEvent3{position: absolute; top: 45%; left: 78%; width: 8%; animation: move-up-down 1s infinite alternate;}
+.section5 .kidsEvent3 > img{width: 100%;}
+
+@keyframes move-up-down {
+    from {
+      top: 46%;
+    }
+    to {
+      top: 48%;
+    }
+  }
+
+.section6{position: relative; width: 100%;}
+.section6 .sec6Sub1{width: 100%; position: relative;}
+.section6 .sec6Sub1 > a{display: block; width: 100%;}
+.section6 .sec6Sub1 > a > img{position: absolute; bottom: 29.5%; right: 11%; display: block; width: 20%;}
+.section6 .sec6Sub2{width: 100%; position: relative;}
+.section6 .sec6Sub2 > a{display: block; width: 30%;}
+.section6 .sec6Sub2 > a > img{position: absolute; bottom: 44.3%; right: 11%; display: block; width: 20%;}
+.section6 .sec6Sub3{width: 100%; position: relative;}
+.section6 .sec6Sub3 > a{display: block; width: 30%;}
+.section6 .sec6Sub3 > a > img{position: absolute; bottom: 43.4%; right: 11%; display: block; width: 20%;}
+.section6 .sec6Sub4{width: 100%; position: relative;}
+.section6 .sec6Sub4 > a{display: block; width: 30%;}
+.section6 .sec6Sub4 > a > img{position: absolute; bottom: 44.7%; right: 11%; display: block; width: 20%;}
+
+.section7{position: relative; width: 100%;}
+.bx-wrapper{width: 100%; position: absolute !important; top: 63%; left: 50%; transform: translate(-50%, -50%); box-shadow:0 !important; border:0 !important; -webkit-box-shadow: 0 0 0px #ccc !important;}
+/* bxslider 슬라이드 좌우 그라데이션 스타일 */
+.bx-wrapper .bx-viewport::before,.bx-wrapper .bx-viewport::after{content: ""; position: absolute; top: 0; height: 100%; width:10%; z-index: 100;}
+/* 좌측 그라데이션 스타일 */
+.bx-wrapper .bx-viewport::before{left: 0; background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);}
+/* 우측 그라데이션 스타일 */
+.bx-wrapper .bx-viewport::after{right: 0; background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);}
+
+.section8{position: relative; width: 100%;}
+.section8 .sec8Sub4{width: 100%; position: relative;}
+.section8 .sec8Sub4 .sec8SubGif1{display: block; width: 100%;}
+.section8 .sec8Sub4 .sec8SubGif1 img{position: absolute; bottom: 12%; left: 50%; transform: translateX(-50%); display: block; width: 90%;}
+.section8 .sec8Sub5{width: 100%; display: block; position: relative;}
+.section8 .sec8Sub5 .sec8SubGif2{display: block; width: 100%;}
+.section8 .sec8Sub5 .sec8SubGif2 img{position: absolute; bottom: 39%; left: 50%; display: block; width: 65%; transform: translateX(-50%);}
+
+.section9{position: relative; width: 100%;}
+
+.section10{position: relative; width: 100%;}
+.section10 .subBtn4{width: 100%;}
+.section10 .subBtn4 > a{display: block; width: 30%;}
+.section10 .subBtn4 > a > img{position: absolute; top: 32%; left: 50%; transform: translateX(-50%); display: block; width: 56%;}
+
+.section11{position: relative; width: 100%;}
+.section11 .subBtn6{width: 100%;}
+.section11 .subBtn6 > a{display: block; width: 30%;}
+.section11 .subBtn6 > a > img{position: absolute; bottom: 6%; left: 50%; transform: translateX(-50%); display: block; width: 38%;}
+
+.section12{position: relative; width: 100%;}
+.section12 .sec12Sub1{width: 100%; position: relative;}
+.section12 .sec12Sub1 > a{display: block; width: 30%;}
+.section12 .sec12Sub1 > a > img{position: absolute; bottom: 4%; right: 3.3%; display: block; width: 16%;}
+.section12 .sec12Sub2{width: 100%; position: relative;}
+.section12 .sec12Sub2 > a{display: block; width: 30%;}
+.section12 .sec12Sub2 > a > img{position: absolute; bottom: 4.5%; right: 3.2%; display: block; width: 16%;}
+.section12 .sec12Sub3{width: 100%; position: relative;}
+.section12 .sec12Sub3 > a{display: block; width: 30%;}
+.section12 .sec12Sub3 > a > img{position: absolute; bottom: 4.6%; right: 3.2%; display: block; width: 16%;}
+.section12 .sec12Sub4{width: 100%; position: relative;}
+.section12 .sec12Sub4 > a{display: block; width: 30%;}
+.section12 .sec12Sub4 > a > img{position: absolute; bottom: 6.7%; right: 3.2%; display: block; width: 16%;}
+
+.section13{position: relative; width: 100%;}
+
+.section14{position: relative; width: 100%;}
+.section14 .sec14Sub1{width: 100%; position: absolute; display: block; bottom: 44%; left: 50%; transform: translateX(-50%);}
+.section14 .sec14Sub1 .sec14Sub1-1{display: flex; width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: center;}
+.section14 .sec14Sub1 .sec14Sub1-1 > a{margin-left: 20px; display: block; width: 30%;}
+.section14 .sec14Sub1 .sec14Sub1-1 > a:nth-child(1){margin-left: 0px;}
+.section14 .sec14Sub1 .sec14Sub1-1 > a > img{width: 100%;}
+.section14 .sec14Sub1 .sec14Sub1-2{}
+.section14 .sec14Sub1 .sec14Sub1-2 > a{display: block; width: 56%; margin: 5% auto 0;}
+.section14 .sec14Sub1 .sec14Sub1-2 > a > img{width: 100%;}
+.section14 .sec14Sub2{position: absolute; width: 56%; bottom: 4%; display: block; left: 50%; transform: translateX(-50%);}
+.section14 .sec14Sub2 > a{display: block; margin-top: 10%;}
+.section14 .sec14Sub2 > a:nth-child(1){margin-left: 0;}
+.section14 .sec14Sub2 > a > img{width: 100%;}
+
+.section15{position: relative; width: 100%;}
+
+.section16{position: relative; width: 100%;}
+
+footer{width: 100%; position: relative;}
+footer .footerBtn{width: 100%; display: block;}
+footer .footerBtn .footerSub1{position: absolute; width: 77%; bottom: 49%; display: flex; flex-direction: row; transform: translateX(-50%); left: 50%; justify-content: center;}
+footer .footerBtn .footerSub1 > a{display: block; width: 100%;}
+footer .footerBtn  .footerSub1 > a:nth-child(1){padding-left: 0px;}
+footer .footerBtn  .footerSub1 > a:nth-child(2){padding-left: 3%;}
+footer .footerBtn  .footerSub1 > a > img{width: 100%;}
+
+footer .footerBtn .footerSub2{position: absolute; width: 39%; bottom: 10%; display: flex; flex-direction: row; justify-content: space-around; right: 17.5%;}
+footer .footerBtn .footerSub2 > a{display: block; width: 100%;}
+footer .footerBtn  .footerSub2 > a:nth-child(1){padding-left: 0px;}
+footer .footerBtn  .footerSub2 > a:nth-child(2){padding-left: 3%;}
+footer .footerBtn  .footerSub2 > a > img{width: 100%;}
+
+
+/*footer .footerBtn{position: absolute; width: 77%; bottom: 47%; display: flex; flex-direction: row; transform: translateX(-50%); left: 50%; justify-content: center;}*/
+/*footer .footerBtn > a{display: block;}*/
+/*footer .footerBtn > a:nth-child(1){width: 100%; padding-left: 0px;}*/
+/*footer .footerBtn > a:nth-child(2){width: 100%; padding-left: 10px;}*/
+/*footer .footerBtn > a > img{width: 100%;}*/
